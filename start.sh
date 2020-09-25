@@ -19,7 +19,7 @@ echo "docker installed\n"
 echo "load images > \n"
 docker load --input proxy_1.17.4.tar
 docker load --input centos_7.tar
-docker run -d -p 8888:8888 -v $(pwd)nginx.conf:/etc/nginx/nginx.conf nginx:proxy_1.17.4
+docker run -d -p 8888:8888 -v $(pwd)/nginx.conf:/etc/nginx/nginx.conf nginx:proxy_1.17.4
 echo "completed!\n"
 echo "test:\n"
 curl https://www.baidu.com -v -x 127.0.0.1:8888
